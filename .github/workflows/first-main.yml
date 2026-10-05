@@ -1,0 +1,4 @@
+name: first-main-workflow
+
+# To get trigger on every push in this repo
+on: push
