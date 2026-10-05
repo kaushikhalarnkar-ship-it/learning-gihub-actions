@@ -2,3 +2,15 @@ name: first-main-workflow
 
 # To get trigger on every push in this repo
 on: push
+
+jobs:
+  job1:
+    name: JOB1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running single command in job1
+        run: echo "hi this is my first github workflow"
+      -name: Checking OS release for Github runner
+        run: cat /etc/os-release
+        
+      
