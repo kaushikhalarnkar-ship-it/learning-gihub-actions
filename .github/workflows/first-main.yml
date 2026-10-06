@@ -8,24 +8,19 @@ jobs:
     name: JOB1
     runs-on: ubuntu-latest
     steps:
-      - name: Running single command in job1
-        run: echo "hi this is my first github workflow"
-      - name: Checking OS release for Github runner
-        run: cat /etc/os-release
-      - name: calling sleep
-        run: sleep 20
-  job2:
-     name: JOB2
-     runs-on: ubuntu-latest
-     steps:
-       - name: checking the hostname for runner
-         run: hostname
-       - name: Running multiple commands
-         run: 
-           echo "Hi this is kaushik halarnkar"
-           echo "current time is 'date'"
-           sleep 20
-        
+      - name: step-1
+        run: 
+          pwd
+          ls -ltr
+          hostname
+      - name: step2 checkout
+        uses: actions/checkout@v7.0.1
+      - name: step3
+        run: |
+          pwd
+          ls -ltr
+          hostname
+    
        
         
       
